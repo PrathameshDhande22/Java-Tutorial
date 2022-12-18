@@ -1,4 +1,4 @@
-package tutorial;
+package tutorial.excercise;
 
 import java.util.Arrays;
 

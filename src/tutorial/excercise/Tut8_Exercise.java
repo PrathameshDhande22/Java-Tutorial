@@ -1,4 +1,4 @@
-package tutorial;
+package tutorial.excercise;
 
 /*
  * your task is to print this pattern
