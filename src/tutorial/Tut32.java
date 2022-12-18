@@ -2,6 +2,11 @@ package tutorial;
 
 import java.util.Date;
 
+@FunctionalInterface // this is given when the interface contains only one function
+interface ekinterface {
+	public void display();
+}
+
 //enum and annotations
 public class Tut32 {
 
