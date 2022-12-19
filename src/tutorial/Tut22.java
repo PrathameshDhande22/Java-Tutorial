@@ -22,7 +22,6 @@ public class Tut22 extends Abcla {
 
 	@Override
 	public int num(int x) {
-		// TODO Auto-generated method stub
 		return x;
 	}
 }
