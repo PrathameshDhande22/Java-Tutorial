@@ -7,7 +7,7 @@ public class Tut9 {
 		int[] array1 = new int[4];
 		int[] arr = { 1, 2, 3, 4 };
 
-		// String arrays
+		// String  arrays
 		String[] strarray = { "Prat", "Nid", "Dhan" };
 
 		// iterating array
