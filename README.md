@@ -1,12 +1,9 @@
-# Java Tutorial
+# Java tutorial
 
-This repo contains Java Tutorial From Scratch <br/>
+All Files and Codes related to Java Codes and Technologies. 
 
-### Completed :
-1. Anagram Problem
-2. Reverse the Array
-3. Printing the Pattern
+1. Java tutorial
+2. Design Patterns in Java. 
 
-### Project :
-The Related Project is in [Here](https://github.com/PrathameshDhande22/Employee-Management-System)
+
 
