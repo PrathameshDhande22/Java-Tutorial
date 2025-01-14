@@ -1,6 +1,10 @@
 ---
-title: Welcome to Quartz
+title: Java Design Patterns 
 ---
+# Java Design Patterns
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+## Contents:
+
+1. [Strategy Pattern](./docs/Strategy.md)
+
+### Author: Prathamesh Dhande
