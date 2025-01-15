@@ -8,8 +8,9 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://prathameshdhande22.github.io/Java-Tutorial/",
+      LinkedIn:"https://www.linkedin.com/in/prathamesh-dhande-3a039721a/"
+      // TODO: Later Add the Notes Links here
     },
   }),
 }
@@ -27,11 +28,13 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.Explorer({
+      title:"Pattern"
+    }),
   ],
   right: [
-    Component.Graph(),
-    Component.DesktopOnly(Component.TableOfContents()),
+    // Component.Graph(),
+    Component.TableOfContents(),
     Component.Backlinks(),
   ],
 }
