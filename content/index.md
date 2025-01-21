@@ -14,6 +14,7 @@ title: Java Design Patterns
 ## Contents:
 
 1. [[Strategy Pattern]]
+2. [[Observer Pattern]]
 
 ---
 > [!Note] 
