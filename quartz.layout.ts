@@ -9,7 +9,7 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       GitHub: "https://prathameshdhande22.github.io/Java-Tutorial/",
-      LinkedIn:"https://www.linkedin.com/in/prathamesh-dhande-3a039721a/"
+      LinkedIn: "https://www.linkedin.com/in/prathamesh-dhande-3a039721a/"
       // TODO: Later Add the Notes Links here
     },
   }),
@@ -28,9 +28,11 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.Explorer({
-      title:"Pattern"
-    }),
+    Component.DesktopOnly(
+      Component.Explorer({
+        title: "Pattern"
+      }),
+    )
   ],
   right: [
     // Component.Graph(),
