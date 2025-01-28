@@ -1,5 +1,5 @@
 ---
-title: Java Design Patterns 
+title: Design Patterns
 ---
 ### What is Design Pattern ?
 
@@ -10,6 +10,18 @@ title: Java Design Patterns
 - **Creational patterns** provide object creation mechanisms that increase flexibility and reuse of existing code.
 - **Structural patterns** explain how to assemble objects and classes into larger structures, while keeping these structures flexible and efficient.
 - **Behavioral patterns** take care of effective communication and the assignment of responsibilities between objects.
+
+> [!Important] Prerequisite
+>Must have knowledge of **OOPS (Object-Oriented Programming Principles)** and **Java**. The design patterns are primarily based on OOPS concepts. The code in this tutorial is mainly written in Java and related frameworks.
+>
+>**OOPS Concepts:**
+> - Inheritance
+>- Abstraction
+>- Polymorphism
+>- Encapsulation
+ 
+Before diving into design patterns, it’s important to understand the **SOLID Principles**, **Tightly Coupled Classes**, and **Loosely Coupled Classes**. Additionally, some tips and tricks for writing clean code.
+
 ---
 ## Contents:
 

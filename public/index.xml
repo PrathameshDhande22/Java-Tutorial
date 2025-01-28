@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
-      <title>🛠️ Java Design Patterns</title>
+      <title>🛠️ Design Patterns</title>
       <link>https://https://prathameshdhande22.github.io/Java-Tutorial/</link>
-      <description>Last 10 notes on 🛠️ Java Design Patterns</description>
+      <description>Last 10 notes on 🛠️ Design Patterns</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Decorator Pattern</title>
+    <link>https://https://prathameshdhande22.github.io/Java-Tutorial/Decorator-Pattern</link>
+    <guid>https://https://prathameshdhande22.github.io/Java-Tutorial/Decorator-Pattern</guid>
+    <description>Comming Soon.</description>
+    <pubDate>Tue, 28 Jan 2025 18:17:00 GMT</pubDate>
+  </item><item>
     <title>Observer Pattern</title>
     <link>https://https://prathameshdhande22.github.io/Java-Tutorial/Observer-Pattern</link>
     <guid>https://https://prathameshdhande22.github.io/Java-Tutorial/Observer-Pattern</guid>
@@ -18,7 +24,7 @@
     <description>behavioral Definition It Defines a family of algorithms encapsulates each one, and makes them interchangeable. Strategy Lets the algorithms vary independently from clients that use it.</description>
     <pubDate>Tue, 14 Jan 2025 18:41:56 GMT</pubDate>
   </item><item>
-    <title>Java Design Patterns</title>
+    <title>Design Patterns</title>
     <link>https://https://prathameshdhande22.github.io/Java-Tutorial/</link>
     <guid>https://https://prathameshdhande22.github.io/Java-Tutorial/</guid>
     <description>What is Design Pattern ? Design patterns are typical solutions to commonly occurring problems in software design. They are like pre-made blueprints that you can customize to solve a recurring design problem in your code.</description>

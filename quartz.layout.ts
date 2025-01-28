@@ -30,14 +30,20 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Darkmode(),
     Component.DesktopOnly(
       Component.Explorer({
-        title: "Pattern"
+        title: "Patterns"
       }),
     )
   ],
   right: [
-    // Component.Graph(),
     Component.TableOfContents(),
     Component.Backlinks(),
+    Component.MobileOnly(Component.Explorer({
+      title:"Patterns",
+      folderClickBehavior:"collapse",
+      folderDefaultState:"collapsed",
+      
+    })),
+    Component.Graph(),
   ],
 }
 

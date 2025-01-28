@@ -4,9 +4,9 @@
 It Defines a family of algorithms encapsulates each one, and makes them interchangeable. Strategy Lets the algorithms vary independently from clients that use it. 
 
 ---
-## Real World Analogy
+## Real World Analogy - 1
 
-Consider you are creating the Duck Application in which there are many types of Duck which may quack, fly. The Simple Approach would be just create the base class Duck and the method like fly, quack and implement it to other types of Duck. 
+Consider creating a Duck application with different types of ducks that can quack and fly. A simple approach would be to create a base class called `Duck` with methods like `fly` and `quack`, and then implement these methods in the specific types of ducks.
 
 ```mermaid
 ---
@@ -29,8 +29,9 @@ classDiagram
     Duck <|-- MallardDuck
     Duck <|-- RubberDuck
 ```
+
 > [!Question] What is Wrong With These Approach ?
-> You have just implement the Base class as Duck in which the methods are also implemented. For Example the Base Class of the Duck has the implementation of the Fly Ducks. Then for RubberDuck Class, Duck cannot quack nor fly. To modify these behavior you need to rewrite the code again for the method fly and quack which is not feasible when it comes to dozens of duck. You need some approach to tackle these type of solution. Solution is **Strategy Pattern**.
+> You have implemented a base class called `Duck`, where methods like `fly` and `quack` are already defined. For example, the base class `Duck` has a default implementation of flying. However, in the case of a `RubberDuck` class, the duck cannot quack or fly. To modify this behavior, you would need to rewrite the `fly` and `quack` methods, which becomes inefficient when dealing with dozens of duck types. To address this issue, you can use the **Strategy Pattern**.
 
 Let's see the Implementation via Strategy Pattern:
 ```mermaid
@@ -92,7 +93,7 @@ classDiagram
     Duck <|-- MallardDuck
     Duck <|-- RubberDuck
 ```
-Here we Created the Interface FlyBehavior and QuackBehavior which takes the method. By implementing these interface you can create new behavior. For Abstract Base Class Duck just make use of the Interface in the constructor means you can change the behaviour or even implement the new Duck by passing the Duck Behavior or Custom Behavior. 
+Here, we create two interfaces: `FlyBehavior` and `QuackBehavior`, which define the methods for flying and quacking. By implementing these interfaces, you can create new behaviors. In the abstract base class `Duck`, you use these interfaces in the constructor, allowing you to change the behavior dynamically or even implement a new duck type by passing specific behaviors or custom behaviors.
 
 ---
 ## Code in Java
@@ -203,3 +204,7 @@ public class Index {
   }
 }
 ```
+---
+## Real World Analogy - 2
+
+Let's take the another Example of the Logging Framework. 
