@@ -38,12 +38,12 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TableOfContents(),
     Component.Backlinks(),
     Component.MobileOnly(Component.Explorer({
-      title:"Patterns",
-      folderClickBehavior:"collapse",
-      folderDefaultState:"collapsed",
-      
+      title: "Patterns",
+      folderClickBehavior: "collapse",
+      folderDefaultState: "collapsed",
+
     })),
-    Component.Graph(),
+    Component.Graph({ globalGraph: { zoom: true }, localGraph: {} }),
   ],
 }
 
