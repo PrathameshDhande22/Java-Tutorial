@@ -4,7 +4,6 @@ title: Design Patterns
 ### What is Design Pattern ?
 
 **Design patterns** are typical solutions to commonly occurring problems in software design. They are like pre-made blueprints that you can customize to solve a recurring design problem in your code.
-
 ## Three Main Patterns
 
 - **Creational patterns** provide object creation mechanisms that increase flexibility and reuse of existing code.
@@ -81,9 +80,38 @@ class MessageService {
 Now, you can add as many providers as needed, and `MessageService` will continue to work without being tightly coupled to `EmailClient`.
 
 ---
-## SOLID Principle
+## ## SOLID Principles
 
+The **SOLID** principles are five key object-oriented design principles that should be followed when creating a class structure. Let’s go through each principle one by one:
+### 1. Single Responsibility Principle (SRP)
+This principle states that a class should have only one responsibility and, therefore, only one reason to change.
 
+**Example:**  
+Consider a `Book` class that contains all the methods and variables related to a book. You should not include code related to a `Student` class or methods that are not relevant to the `Book` class.
+### 2. Open-Closed Principle (OCP)
+This principle states that a class should be **open for extension but closed for modification**. Modification refers to changing the code of an existing class, while extension means adding new functionality without altering the existing code.
+
+**Example:**  
+If you have a well-tested and reliable class, modifying its code can introduce bugs and potential system crashes. Instead, you should extend the functionality using **abstract classes** or **interfaces** rather than modifying the tested code directly.
+### 3. Liskov Substitution Principle (LSP)
+This principle states that **subtypes of a base class must be substitutable without altering the correctness of the program**.
+
+**Example:**  
+Consider an abstract or base class `Shape` with a method to calculate the area. If you create a `Rectangle` class by inheriting from `Shape`, calling the area calculation method on a `Rectangle` object (using a `Shape` reference) should return the expected result without requiring changes to the base class.
+### 4. Interface Segregation Principle (ISP)
+This principle states that **a class should not be forced to implement interfaces it does not use**. It is better to have multiple **smaller, specific interfaces** rather than a large, general-purpose interface.
+
+**Example:**  
+Consider a `Programmer` class with methods like `work()`, `eat()`, `test()`, and `assign()`, all declared in an `IEmployee` interface. The problem arises when you introduce `Manager` and `TeamLead` classes—they require the `assign()` method, but it doesn't belong in the `Programmer` class. To fix this, you can **segregate** the interfaces:
+- Common employee methods go in the `IEmployee` interface.
+- Management-related methods go in an `IManage` interface.
+
+This way, only relevant methods are implemented by each class.
+### 5. Dependency Inversion Principle (DIP)
+This principle states that **high-level modules should not depend on low-level modules; instead, both should depend on abstractions (interfaces or abstract classes)**.
+
+**Example:**  
+Consider an `SQLManager` class that performs CRUD operations. It has an `ILogger` interface for logging, which allows you to use different loggers like `FileLogger`, `ConsoleLogger`, or `TableLogger`. Since the `SQLManager` depends on the abstraction (`ILogger`) rather than a specific logging implementation, you can switch loggers without breaking the system.
 
 ---
 ## Contents:

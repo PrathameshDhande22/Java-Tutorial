@@ -21,7 +21,7 @@
     <title>Strategy Pattern</title>
     <link>https://https://prathameshdhande22.github.io/Java-Tutorial/Strategy-Pattern</link>
     <guid>https://https://prathameshdhande22.github.io/Java-Tutorial/Strategy-Pattern</guid>
-    <description>behavioral Definition It Defines a family of algorithms encapsulates each one, and makes them interchangeable. Strategy Lets the algorithms vary independently from clients that use it.</description>
+    <description>behavioral Definition It defines a family of algorithms, encapsulates each one, and makes them interchangeable. The Strategy Pattern allows algorithms to vary independently from the clients that use them.</description>
     <pubDate>Tue, 14 Jan 2025 18:41:56 GMT</pubDate>
   </item><item>
     <title>Design Patterns</title>
