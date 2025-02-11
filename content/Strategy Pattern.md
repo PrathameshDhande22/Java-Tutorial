@@ -212,6 +212,17 @@ public class Index {
   }
 }
 ```
+**Output:**
+```
+======= Rubber Duck ======
+Can't Fly
+MUte Quacking
+
+===== Mallard Duck =====
+Can Fly
+Squeak
+```
+
 ---
 ## Real World Analogy - 2
 
@@ -264,3 +275,35 @@ classDiagram
 	
 ```
 ---
+## Real World Example
+
+The `Comparator` interface acts as the Strategy Pattern. By inheriting this interface, you can create your custom comparator, which allows you to sort collections.
+
+```java title:Person.java
+class NameComparator implements Comparator<Person> {
+    public int compare(Person p1, Person p2) {
+        return p1.name.compareTo(p2.name);
+    }
+}
+
+List<Person> people = Arrays.asList( 
+	new Person("Alice", 25), 
+	new Person("Bob", 30), 
+	new Person("Charlie", 22) 
+);
+
+// Apply sorting strategy at runtime 
+Collections.sort(people, new NameComparator()); 
+System.out.println("Sorted by name: " + people);
+```
+---
+## Design Principles
+
+> [!Note] Note
+> The Design Principles will be changing based on the Design Patterns and new design principles will be added to it as you go through the Different Design Patterns.
+
+- **Encapsulate What Varies** - Identify the parts of the code that are going to change and encapsulate them into separate class just like the Strategy Pattern. 
+- **Favor Composition Over Inheritance** - Instead of using inheritance on extending functionality, rather use composition by delegating behavior to other objects. 
+- **Program to Interface not Implementations** - Write code that depends on Abstractions or Interfaces rather than Concrete Classes. 
+---
+
