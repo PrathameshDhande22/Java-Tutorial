@@ -219,3 +219,74 @@ public class ObserverPattern {
 ```
 ---
 ## Real World Example
+
+The **Observer Pattern** is commonly used in many libraries and frameworks. For example, the **Swing Library** uses the Observer Pattern in the `JButton` class, which has various action listeners that are triggered when the button is clicked.
+
+This class allows you to **add or remove observers** easily. You can also create multiple listeners by implementing the `ActionListener` interface.
+
+Below is an example demonstrating this.
+```java title:SwingApp.java
+package observer;
+
+import java.awt.Rectangle;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+// It is mostly used in Swing application 
+class SwingApp {
+	private JFrame jframe;
+
+	public SwingApp() {
+		jframe = new JFrame("Swing Example");
+		jframe.setVisible(true);
+		jframe.setBounds(new Rectangle(50, 50, 400, 400));
+
+	}
+
+	public void defineButton() {
+		JButton button = new JButton("Click Me");
+		button.setBounds(10, 10, 50, 30);
+		jframe.add(button);
+
+		// we are subscribing the observer when the button is clicked.
+		button.addActionListener(new AngelListener());
+	}
+
+}
+
+// These is the observer 
+class AngelListener implements ActionListener {
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		System.out.println(e.getActionCommand());
+	}
+
+}
+
+public class SwingApplication {
+
+	public static void main(String[] args) {
+		SwingApp app = new SwingApp();
+		app.defineButton();
+	}
+
+}
+
+```
+**Output:**
+
+![[Pasted image 20250212233819.png|400]]
+
+When the button is clicked, the text **"Click Me"** appears in the console. When you click on the `JButton`, it **notifies the observers** subscribed to it that a click event has occurred, prompting them to execute their respective code.
+
+---
+## Design Principles
+
+- **Encapsulate What Varies** - Identify the parts of the code that are going to change and encapsulate them into separate class just like the Strategy Pattern. 
+- **Favor Composition Over Inheritance** - Instead of using inheritance on extending functionality, rather use composition by delegating behavior to other objects. 
+- **Program to Interface not Implementations** - Write code that depends on Abstractions or Interfaces rather than Concrete Classes. 
+- **Strive for Loosely coupled design between objects that interact** - When implementing a class, avoid tightly coupled classes. Instead, use loosely coupled objects by leveraging abstractions and interfaces. This approach ensures that the class does not heavily depend on other classes.
+---
