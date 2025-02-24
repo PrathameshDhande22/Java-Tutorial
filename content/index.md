@@ -118,6 +118,7 @@ Consider an `SQLManager` class that performs CRUD operations. It has an `ILogger
 
 1. [[Strategy Pattern]]
 2. [[Observer Pattern]]
+3. [[Decorator Pattern]]
 
 ---
 > [!Note] 
