@@ -1,4 +1,9 @@
-#behavioral
+---
+title: Strategy Pattern
+tags:
+  - behavioral
+---
+
 ## Definition
 
 It defines a family of algorithms, encapsulates each one, and makes them interchangeable. The **Strategy Pattern** allows algorithms to vary independently from the clients that use them.

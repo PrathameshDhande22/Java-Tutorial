@@ -1,4 +1,8 @@
-#structural
+---
+title: Decorator Pattern
+tags:
+  - structural
+---
 ## Definition
 
 The Decorator pattern attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality. 
