@@ -20,11 +20,13 @@ import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
+import NavigationLinks from "./NavigationLinks"
 
 export {
   ArticleTitle,
   Content,
   TagContent,
+  NavigationLinks,
   FolderContent,
   Darkmode,
   Head,
