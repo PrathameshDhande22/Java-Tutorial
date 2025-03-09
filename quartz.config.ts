@@ -19,7 +19,7 @@ const config: QuartzConfig = {
     baseUrl: "https://prathameshdhande22.github.io/Java-Tutorial/",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
-    generateSocialImages: false,
+    generateSocialImages: true,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
