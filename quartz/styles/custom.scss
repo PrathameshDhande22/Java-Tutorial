@@ -1,3 +1,15 @@
 @use "./base.scss";
+@import "../components/styles/navbar.scss";
 
 // put your custom CSS here!
+.header {
+    margin: 0.5rem 0;
+}
+
+ul.overflow > li:last-of-type {
+    margin-bottom: 0;
+}
+
+.article-title {
+    margin: 1rem 0 0;
+}

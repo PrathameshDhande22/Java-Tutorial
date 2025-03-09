@@ -15,6 +15,7 @@ import { QuartzPluginData } from "../plugins/vfile"
 
 interface RenderComponents {
   head: QuartzComponent
+  navbar: QuartzComponent[]
   header: QuartzComponent[]
   beforeBody: QuartzComponent[]
   pageBody: QuartzComponent
@@ -34,12 +35,7 @@ export function pageResources(
   const contentIndexScript = `const fetchData = fetch("${contentIndexPath}").then(data => data.json())`
 
   const resources: StaticResources = {
-    css: [
-      {
-        content: joinSegments(baseDir, "index.css"),
-      },
-      ...staticResources.css,
-    ],
+    css: [{ content: joinSegments(baseDir, "index.css") }, ...staticResources.css],
     js: [
       {
         src: joinSegments(baseDir, "prescript.js"),
@@ -107,12 +103,7 @@ export function renderPage(
           let blockNode = page.blocks?.[blockRef]
           if (blockNode) {
             if (blockNode.tagName === "li") {
-              blockNode = {
-                type: "element",
-                tagName: "ul",
-                properties: {},
-                children: [blockNode],
-              }
+              blockNode = { type: "element", tagName: "ul", properties: {}, children: [blockNode] }
             }
 
             node.children = [
@@ -210,6 +201,7 @@ export function renderPage(
   const {
     head: Head,
     header,
+    navbar,
     beforeBody,
     pageBody: Content,
     afterBody,
@@ -228,6 +220,16 @@ export function renderPage(
     </div>
   )
 
+  const NavbarComponent = (
+    <div class="navbar">
+      <div class="navbar-center">
+        {navbar.map((BodyComponent) => (
+          <BodyComponent {...componentData} />
+        ))}
+      </div>
+    </div>
+  )
+
   const RightComponent = (
     <div class="right sidebar">
       {right.map((BodyComponent) => (
@@ -238,11 +240,12 @@ export function renderPage(
 
   const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
   const doc = (
-    <html lang={lang}>
+    <html lang={lang} saved-theme="dark">
       <Head {...componentData} />
       <body data-slug={slug}>
         <div id="quartz-root" class="page">
           <Body {...componentData}>
+            {NavbarComponent}
             {LeftComponent}
             <div class="center">
               <div class="page-header">
