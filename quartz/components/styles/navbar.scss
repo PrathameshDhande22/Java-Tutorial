@@ -1,0 +1,46 @@
+@use "../../styles/variables.scss" as *;
+@use "sass:map";
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    background-color: var(--light);
+    z-index: 100;
+
+    @media all and ($desktop) {
+        justify-content: center;
+    }
+
+    & .navbar-center {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 60px;
+        min-width: 95%;
+        justify-content: space-between;
+        align-items: center;
+
+        @media all and ($mobile) {
+            width: 90%;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        @media all and ($tablet) {
+            width: 90%;
+        }
+
+        & .explorer.mobile-only {
+            position: relative;
+            top: 15px;
+            left: -20px;
+        }
+    }
+}
+
+.left.sidebar {
+    & > .search {
+        padding: 1rem 0 8px;
+    }
+}
