@@ -1,0 +1,95 @@
+@use "../../styles/variables.scss" as *;
+
+.nav-links {
+    position: absolute;
+    right: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media all and ($mobile) {
+        position: relative;
+        right: 0;
+    }
+
+    & .menu-btn {
+        display: none;
+        padding: 5px 20px;
+        background-color: var(--light);
+        border: 1px solid var(--tertiary);
+        border-radius: 30px;
+        font-family: var(--bodyFont);
+        font-size: 15px;
+        outline: none;
+
+        @media all and ($mobile) {
+            display: block;
+            cursor: pointer;
+        }
+
+        &:hover {
+            background-color: var(--tertiary);
+            transition: background-color 0.3s ease-in;
+            color: var(--light);
+        }
+    }
+
+    & ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        @media all and ($mobile) {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 300px;
+            background-color: var(--light);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            padding: 10px;
+            z-index: 1000;
+        }
+    }
+
+    & ul.active {
+        @media all and ($mobile) {
+            display: flex;
+            border: 2px solid var(--lightgray);
+        }
+    }
+
+    & ul > li {
+        list-style: none;
+        display: inline-block;
+        font-size: 20px;
+        padding: 0 4px;
+    }
+
+    & ul > li > a {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+        padding: 5px 0;
+    }
+
+    & ul > li > a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: currentColor;
+        transition: width 0.5s ease-in-out;
+    }
+
+    & ul > li > a:hover::after {
+        width: 100%;
+    }
+}
