@@ -28,7 +28,6 @@ body:
       label: "Feature Request Description"
       description: "Describe the feature in detail. Include any relevant context or examples."
       placeholder: "Explain what the feature should do and how it should work."
-      render: markdown
     validations:
       required: true
 
@@ -38,6 +37,5 @@ body:
       label: "Why is this feature needed?"
       description: "Explain why this feature would be useful or necessary."
       placeholder: "E.g., This feature improves usability by..."
-      render: markdown
     validations:
       required: false
