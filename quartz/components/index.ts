@@ -21,10 +21,12 @@ import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import NavigationLinks from "./NavigationLinks"
+import Drawer from "./Drawer"
 
 export {
   ArticleTitle,
   Content,
+  Drawer,
   TagContent,
   NavigationLinks,
   FolderContent,
