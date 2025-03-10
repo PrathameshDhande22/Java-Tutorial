@@ -1,0 +1,22 @@
+name: "Bug Report"
+description: "Report a bug or issue with the project."
+labels: ["bug"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: "Title"
+      description: "Provide a short and clear title for the bug."
+      placeholder: "E.g., App crashes on startup"
+    validations:
+      required: true
+
+  - type: textarea
+    id: describe
+    attributes:
+      label: "Bug Description"
+      description: "Describe the bug in detail. Include steps to reproduce, expected behavior, and actual behavior."
+      placeholder: "Provide a clear and concise description of what the bug is."
+      render: markdown
+    validations:
+      required: true

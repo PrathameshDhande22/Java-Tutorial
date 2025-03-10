@@ -1,0 +1,43 @@
+name: "Feature Request"
+description: "Suggest a new feature or a change to an existing feature."
+labels: ["feature request"]
+body:
+  - type: dropdown
+    id: feature_type
+    attributes:
+      label: "Feature Type"
+      description: "Is this a new feature or a change to an existing feature?"
+      options:
+        - "New Feature"
+        - "Change to Existing Feature"
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: "Title"
+      description: "Provide a short and clear title for the feature request."
+      placeholder: "E.g., Add dark mode support"
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature_request
+    attributes:
+      label: "Feature Request Description"
+      description: "Describe the feature in detail. Include any relevant context or examples."
+      placeholder: "Explain what the feature should do and how it should work."
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: why_required
+    attributes:
+      label: "Why is this feature needed?"
+      description: "Explain why this feature would be useful or necessary."
+      placeholder: "E.g., This feature improves usability by..."
+      render: markdown
+    validations:
+      required: false
