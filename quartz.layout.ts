@@ -16,11 +16,8 @@ export const sharedPageComponents: SharedLayout = {
     Component.Darkmode()
   ],
   head: Component.Head(),
-  header: [
-
-  ],
-  afterBody: [
-  ],
+  header: [],
+  afterBody: [],
   footer: Component.Footer({
     links: {
       GitHub: "https://prathameshdhande22.github.io/Java-Tutorial/",
@@ -32,7 +29,6 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-
     Component.Breadcrumbs(),
     Component.ArticleTitle(),
     Component.ContentMeta(),
@@ -40,7 +36,13 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.MobileOnly(
-      Component.Drawer()
+      Component.Drawer({
+        links: {
+          Blogs: "/blogs",
+          Github: "https://github.com/PrathameshDhande22/Java-Tutorial",
+          "About Me": "https://github.com/PrathameshDhande22"
+        }
+      })
     ),
     Component.Search(),
     Component.DesktopOnly(
