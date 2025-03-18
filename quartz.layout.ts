@@ -16,7 +16,15 @@ export const sharedPageComponents: SharedLayout = {
     Component.Darkmode()
   ],
   head: Component.Head(),
-  header: [],
+  header: [Component.MobileOnly(
+    Component.Drawer({
+      links: {
+        Blogs: "/blogs",
+        Github: "https://github.com/PrathameshDhande22/Java-Tutorial",
+        "About Me": "https://github.com/PrathameshDhande22"
+      }
+    })
+  )],
   afterBody: [],
   footer: Component.Footer({
     links: {
@@ -35,15 +43,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
   ],
   left: [
-    Component.MobileOnly(
-      Component.Drawer({
-        links: {
-          Blogs: "/blogs",
-          Github: "https://github.com/PrathameshDhande22/Java-Tutorial",
-          "About Me": "https://github.com/PrathameshDhande22"
-        }
-      })
-    ),
     Component.Search(),
     Component.DesktopOnly(
       Component.Explorer({

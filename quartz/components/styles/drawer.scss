@@ -2,12 +2,12 @@
 
 .drawer {
     position: fixed;
-    top: 60px;
+    top: 0px;
     right: 0;
     width: 100vw;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
-    height: 90vh;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     color: var(--gray);
     z-index: 600;
@@ -30,12 +30,20 @@
     }
 }
 
+.drawer-title{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: var(--secondary);
+}
+
 .drawer-wrapper {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 80%;
-    height: 90%;
+    width: 70%;
+    height: 85%;
+    padding: 10px 10px 10px 20px;
     background-color: var(--light);
 
     & > .links {
@@ -43,14 +51,13 @@
         flex-direction: column;
         justify-content: center;
         gap: 5px;
-        padding-left: 0;
+        padding: 0;
+        margin: 0;
 
         & > li {
             list-style: none;
-            text-align: center;
             display: inline-block;
             font-size: 18px;
-            padding: 0 6px;
 
             & > a {
                 display: inline-block;

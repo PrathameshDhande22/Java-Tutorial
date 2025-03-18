@@ -43,3 +43,20 @@ export async function fetchCanonical(url: URL): Promise<Response> {
   const [_, redirect] = text.match(canonicalRegex) ?? []
   return redirect ? fetch(`${new URL(redirect, url)}`) : res
 }
+
+export function assignActiveClassToDrawerButton(isactive: boolean) {
+  const hamburgersvg = document.querySelector(".hamburger")
+  const cross = document.querySelector(".cross")
+
+  if (isactive) {
+    cross?.classList.add("active")
+    hamburgersvg?.classList.remove("active")
+    document.body.style.overflow = "hidden"
+    document.body.style.height = "100vh"
+  } else {
+    cross?.classList.remove("active")
+    hamburgersvg?.classList.add("active")
+    document.body.style.overflow = "auto"
+    document.body.style.height = "100%"
+  }
+}
