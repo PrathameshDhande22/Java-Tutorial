@@ -13,7 +13,8 @@ export const sharedPageComponents: SharedLayout = {
         "About Me": "https://github.com/PrathameshDhande22"
       }
     }),
-    Component.Darkmode()
+    Component.Darkmode(),
+    Component.Search()
   ],
   head: Component.Head(),
   header: [Component.MobileOnly(

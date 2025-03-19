@@ -7,3 +7,8 @@ drawerele?.addEventListener("click", () => {
     const isdrawerActive: boolean = drawerele.classList.contains("active")
     assignActiveClassToDrawerButton(isdrawerActive)
 })
+
+const toccontentele = document.querySelector(".toc")
+toccontentele?.addEventListener("click", (e) => {
+    e.stopPropagation();
+})
