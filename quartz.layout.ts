@@ -44,7 +44,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
   ],
   left: [
-    Component.Search(),
     Component.DesktopOnly(
       Component.Explorer({
         title: "Patterns",
