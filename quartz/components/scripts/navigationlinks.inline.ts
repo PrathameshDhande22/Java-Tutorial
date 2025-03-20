@@ -1,5 +1,11 @@
-let links = document.getElementsByClassName("links")[0]
+import { assignActiveClassToDrawerButton } from "./util"
+
+let drawer = document.getElementsByClassName("drawer")[0]
 
 document.getElementsByClassName("menu-btn")[0].addEventListener("click", () => {
-    links.classList.toggle("active")
+    drawer.classList.add("active")
+
+    const isdrawerActive: boolean = drawer.classList.contains("active")
+    assignActiveClassToDrawerButton(isdrawerActive)
 })
+

@@ -5,22 +5,32 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   navbar: [
     Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.NavigationLinks({
+    Component.NavbarWrapper({
+      components: [
+        Component.MobileOnly(Component.Spacer()),
+        Component.NavigationLinks({
+          links: {
+            Blogs: "/blogs",
+            Github: "https://github.com/PrathameshDhande22/Java-Tutorial",
+            "About Me": "https://github.com/PrathameshDhande22"
+          }
+        }),
+        Component.Search(),
+        Component.Darkmode()
+      ]
+    })
+  ],
+  head: Component.Head(),
+  header: [Component.MobileOnly(
+    Component.Drawer({
       links: {
         Blogs: "/blogs",
         Github: "https://github.com/PrathameshDhande22/Java-Tutorial",
         "About Me": "https://github.com/PrathameshDhande22"
       }
-    }),
-    Component.Darkmode()
-  ],
-  head: Component.Head(),
-  header: [
-
-  ],
-  afterBody: [
-  ],
+    })
+  )],
+  afterBody: [],
   footer: Component.Footer({
     links: {
       GitHub: "https://prathameshdhande22.github.io/Java-Tutorial/",
@@ -32,14 +42,12 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-
     Component.Breadcrumbs(),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
   ],
   left: [
-    Component.Search(),
     Component.DesktopOnly(
       Component.Explorer({
         title: "Patterns",

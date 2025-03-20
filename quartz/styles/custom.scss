@@ -1,4 +1,5 @@
 @use "./base.scss";
+@use "./variables.scss" as *;
 @import "../components/styles/navbar.scss";
 
 // put your custom CSS here!
@@ -12,4 +13,10 @@ ul.overflow > li:last-of-type {
 
 .article-title {
     margin: 1rem 0 0;
+}
+
+.page-title {
+    @media all and ($mobile) {
+        font-size: 1.5rem;
+    }
 }

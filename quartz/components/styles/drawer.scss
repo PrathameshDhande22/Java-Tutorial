@@ -1,0 +1,70 @@
+@use "../../styles/variables.scss" as *;
+
+.drawer {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 100vw;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--gray);
+    z-index: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+        rgba(85, 86, 86, 0.48) 6px 2px 16px 0px,
+        rgba(0, 0, 0, 0.8) -6px -2px 16px 0px;
+
+    &.active {
+        transform: translateX(0);
+        @media all and ($tablet) {
+            transform: translateX(-100%);
+        }
+
+        @media all and ($desktop) {
+            transform: translateX(-100%);
+        }
+    }
+}
+
+.drawer-title{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: var(--secondary);
+}
+
+.drawer-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 70%;
+    height: 85%;
+    padding: 10px 10px 10px 20px;
+    background-color: var(--light);
+
+    & > .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        padding: 0;
+        margin: 0;
+
+        & > li {
+            list-style: none;
+            display: inline-block;
+            font-size: 18px;
+
+            & > a {
+                display: inline-block;
+                text-decoration: none;
+                color: inherit;
+                padding: 2px 0;
+            }
+        }
+    }
+}
