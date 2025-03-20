@@ -44,6 +44,16 @@ export async function fetchCanonical(url: URL): Promise<Response> {
   return redirect ? fetch(`${new URL(redirect, url)}`) : res
 }
 
+/**
+ * Toggles the active state of the drawer button and adjusts the document body style.
+ * This function is used to manage the visual state of a hamburger menu or drawer interface.
+ * 
+ * @param isactive - A boolean indicating whether the drawer should be in an active state.
+ *                   If true, the cross icon is shown and the body scroll is disabled.
+ *                   If false, the hamburger icon is shown and the body scroll is enabled.
+ * 
+ * @returns void This function does not return a value.
+ */
 export function assignActiveClassToDrawerButton(isactive: boolean) {
   const hamburgersvg = document.querySelector(".hamburger")
   const cross = document.querySelector(".cross")
