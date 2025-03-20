@@ -6,7 +6,6 @@
     top: 0px;
     padding-top: 5px;
     width: 100%;
-    display: flex;
     background-color: var(--light);
     z-index: 100;
 
@@ -21,27 +20,20 @@
         min-width: 95%;
         justify-content: space-between;
         align-items: center;
+        padding: 0px 10px;
 
         @media all and ($mobile) {
             width: 90%;
             gap: 10px;
-            justify-content: flex-end;
+        }
+
+        @media all and (max-width:443px){
+            justify-content: center;
+            margin-bottom: 6px;
         }
 
         @media all and ($tablet) {
             width: 90%;
         }
-
-        & .explorer.mobile-only {
-            position: relative;
-            top: 15px;
-            left: -20px;
-        }
-    }
-}
-
-.left.sidebar {
-    & > .search {
-        padding: 1rem 0 8px;
     }
 }

@@ -5,16 +5,20 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   navbar: [
     Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.NavigationLinks({
-      links: {
-        Blogs: "/blogs",
-        Github: "https://github.com/PrathameshDhande22/Java-Tutorial",
-        "About Me": "https://github.com/PrathameshDhande22"
-      }
-    }),
-    Component.Darkmode(),
-    Component.Search()
+    Component.NavbarWrapper({
+      components: [
+        Component.MobileOnly(Component.Spacer()),
+        Component.NavigationLinks({
+          links: {
+            Blogs: "/blogs",
+            Github: "https://github.com/PrathameshDhande22/Java-Tutorial",
+            "About Me": "https://github.com/PrathameshDhande22"
+          }
+        }),
+        Component.Search(),
+        Component.Darkmode()
+      ]
+    })
   ],
   head: Component.Head(),
   header: [Component.MobileOnly(

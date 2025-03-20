@@ -1,16 +1,8 @@
 @use "../../styles/variables.scss" as *;
 
 .nav-links {
-    position: absolute;
-    right: 9%;
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    @media all and ($mobile) {
-        position: relative;
-        right: 0;
-    }
 
     & .menu-btn {
         display: none;

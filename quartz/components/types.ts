@@ -1,5 +1,5 @@
 import { ComponentType, JSX } from "preact"
-import { StaticResources } from "../util/resources"
+import { StaticResources, StringResource } from "../util/resources"
 import { QuartzPluginData } from "../plugins/vfile"
 import { GlobalConfiguration } from "../cfg"
 import { Node } from "hast"
@@ -15,13 +15,13 @@ export type QuartzComponentProps = {
   allFiles: QuartzPluginData[]
   displayClass?: "mobile-only" | "desktop-only"
 } & JSX.IntrinsicAttributes & {
-    [key: string]: any
-  }
+  [key: string]: any
+}
 
 export type QuartzComponent = ComponentType<QuartzComponentProps> & {
-  css?: string
-  beforeDOMLoaded?: string
-  afterDOMLoaded?: string
+  css?: StringResource
+  beforeDOMLoaded?: StringResource
+  afterDOMLoaded?: StringResource
 }
 
 export type QuartzComponentConstructor<Options extends object | undefined = undefined> = (
