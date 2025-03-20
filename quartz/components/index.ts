@@ -22,6 +22,7 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import NavigationLinks from "./NavigationLinks"
 import Drawer from "./Drawer"
+import NavbarWrapper from "./NavbarWrapper"
 
 export {
   ArticleTitle,
@@ -39,6 +40,7 @@ export {
   Explorer,
   TagList,
   Graph,
+  NavbarWrapper,
   Backlinks,
   Search,
   Footer,
