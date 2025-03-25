@@ -52,6 +52,9 @@ export const defaultContentPageLayout: PageLayout = {
       Component.Explorer({
         title: "Patterns",
         folderDefaultState: "open",
+        sortFn: (a, b) => {
+          return b.file?.dates?.created.valueOf()! - a.file?.dates?.created.valueOf()!
+        }
       })
     )
   ],

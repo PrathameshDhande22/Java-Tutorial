@@ -16,7 +16,9 @@ export default ((opts?: Options) => {
     const links = opts?.links ?? []
     const fileTree = new FileNode("")
     allFiles.forEach((file) => fileTree.add(file))
-
+    allFiles = allFiles.sort((a, b) => {
+      return b.dates?.created.valueOf()! - a.dates?.created.valueOf()!
+    })
     return (
       <div class="drawer">
         <div class="drawer-wrapper">
@@ -57,7 +59,9 @@ export default ((opts?: Options) => {
                 {allFiles.map((value) => {
                   return (
                     <li key={value.slug}>
-                      <a href={resolveRelative(value.slug!, value.slug!)} data-for={value.slug}>{value.frontmatter?.title}</a>
+                      <a href={resolveRelative(value.slug!, value.slug!)} data-for={value.slug}>
+                        {value.frontmatter?.title}
+                      </a>
                     </li>
                   )
                 })}
