@@ -4,12 +4,7 @@ import styles from "../styles/blogs.scss"
 // @ts-ignore
 import script from "../scripts/blogpatterns.inline"
 
-interface Options {
-  links: Record<string, string>
-  components: QuartzComponent[]
-}
-
-export default ((opts?: Options) => {
+export default (() => {
   const Blogs: QuartzComponent = (props: QuartzComponentProps) => {
     /**
      * Sorts all files in descending order based on their creation date.
@@ -56,7 +51,7 @@ export default ((opts?: Options) => {
                 <ul class="overflow">
                   {data.toc?.map((tocEntry) => (
                     <li key={tocEntry.slug} class={`depth-${tocEntry.depth}`}>
-                      <a href={`#${tocEntry.slug}`} data-for={tocEntry.slug}>
+                      <a href={`${data.slug}#${tocEntry.slug}`} data-for={tocEntry.slug}>
                         {tocEntry.text}
                       </a>
                     </li>
