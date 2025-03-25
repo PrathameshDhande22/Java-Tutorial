@@ -3,23 +3,18 @@ import { QuartzComponentProps } from "../../components/types"
 import HeaderConstructor from "../../components/Header"
 import BodyConstructor from "../../components/Body"
 import { pageResources, renderPage } from "../../components/renderPage"
-import { ProcessedContent, QuartzPluginData, defaultProcessedContent } from "../vfile"
+import { QuartzPluginData, defaultProcessedContent } from "../vfile"
 import { FullPageLayout } from "../../cfg"
 import {
   FilePath,
   FullSlug,
-  getAllSegmentPrefixes,
-  joinSegments,
   pathToRoot,
 } from "../../util/path"
 import {
   defaultContentPageLayout,
-  defaultListPageLayout,
   sharedPageComponents,
 } from "../../../quartz.layout"
-import { Content, TagContent } from "../../components"
 import { write } from "./helpers"
-import { i18n } from "../../i18n"
 import DepGraph from "../../depgraph"
 import Blogs from "../../components/pages/Blogs"
 
