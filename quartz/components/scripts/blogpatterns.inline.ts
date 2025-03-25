@@ -1,5 +1,3 @@
-
-
 const tocbutton = document.querySelectorAll(".toc-button")
 
 function closeAllToc(exclude: Element) {
