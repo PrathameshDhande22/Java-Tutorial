@@ -18,18 +18,13 @@ import { write } from "./helpers"
 import DepGraph from "../../depgraph"
 import Blogs from "../../components/pages/Blogs"
 
-interface ExplorerWithTocPageOptions extends FullPageLayout {
-  sort?: (f1: QuartzPluginData, f2: QuartzPluginData) => number
-}
-
-export const ExplorerWithTocPage: QuartzEmitterPlugin<Partial<ExplorerWithTocPageOptions>> = (
+export const ExplorerWithTocPage: QuartzEmitterPlugin = (
   userOpts,
 ) => {
   const opts: FullPageLayout = {
     ...sharedPageComponents,
     ...defaultContentPageLayout,
-    pageBody: Blogs(),
-    ...userOpts,
+    pageBody: Blogs()
   }
 
   const {
@@ -69,7 +64,7 @@ export const ExplorerWithTocPage: QuartzEmitterPlugin<Partial<ExplorerWithTocPag
     async emit(ctx, _content, resources): Promise<FilePath[]> {
       const cfg = ctx.cfg.configuration
       const allFiles = _content.map((c) => c[1].data)
-      const slug = "blogs" as FullSlug
+      const slug = "/blogs/" as FullSlug
       const title = "Pattern Blogs"
       const [tree, vfile] = defaultProcessedContent({
         slug,
