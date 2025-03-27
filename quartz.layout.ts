@@ -24,7 +24,7 @@ export const sharedPageComponents: SharedLayout = {
   header: [Component.MobileOnly(
     Component.Drawer({
       links: {
-        Blogs: "/blogs",
+        Blogs: "../blogs",
         Github: "https://github.com/PrathameshDhande22/Java-Tutorial",
         "About Me": "https://github.com/PrathameshDhande22"
       }
