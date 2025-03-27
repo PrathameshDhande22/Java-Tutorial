@@ -49,9 +49,10 @@ export default (() => {
               </button>
               <div id="toc-content" class={!props.fileData.collapseToc ? "collapsed" : ""}>
                 <ul class="overflow">
+                  {/* TODO: Handling of Folder based Pattern Files is Remaining for Rendering the Links. */}
                   {data.toc?.map((tocEntry) => (
                     <li key={tocEntry.slug} class={`depth-${tocEntry.depth}`}>
-                      <a href={`${data.slug}#${tocEntry.slug}`} data-for={tocEntry.slug}>
+                      <a href={`./${data.slug}#${tocEntry.slug}`} data-for={tocEntry.slug}>
                         {tocEntry.text}
                       </a>
                     </li>
