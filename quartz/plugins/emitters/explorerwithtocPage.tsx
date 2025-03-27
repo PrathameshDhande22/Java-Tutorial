@@ -5,26 +5,17 @@ import BodyConstructor from "../../components/Body"
 import { pageResources, renderPage } from "../../components/renderPage"
 import { QuartzPluginData, defaultProcessedContent } from "../vfile"
 import { FullPageLayout } from "../../cfg"
-import {
-  FilePath,
-  FullSlug,
-  pathToRoot,
-} from "../../util/path"
-import {
-  defaultContentPageLayout,
-  sharedPageComponents,
-} from "../../../quartz.layout"
+import { FilePath, FullSlug, joinSegments, pathToRoot } from "../../util/path"
+import { defaultContentPageLayout, sharedPageComponents } from "../../../quartz.layout"
 import { write } from "./helpers"
 import DepGraph from "../../depgraph"
 import Blogs from "../../components/pages/Blogs"
 
-export const ExplorerWithTocPage: QuartzEmitterPlugin = (
-  userOpts,
-) => {
+export const ExplorerWithTocPage: QuartzEmitterPlugin = (userOpts) => {
   const opts: FullPageLayout = {
     ...sharedPageComponents,
     ...defaultContentPageLayout,
-    pageBody: Blogs()
+    pageBody: Blogs(),
   }
 
   const {
@@ -64,7 +55,7 @@ export const ExplorerWithTocPage: QuartzEmitterPlugin = (
     async emit(ctx, _content, resources): Promise<FilePath[]> {
       const cfg = ctx.cfg.configuration
       const allFiles = _content.map((c) => c[1].data)
-      const slug = "/blogs/" as FullSlug
+      const slug = joinSegments("blogs") as FullSlug
       const title = "Pattern Blogs"
       const [tree, vfile] = defaultProcessedContent({
         slug,
