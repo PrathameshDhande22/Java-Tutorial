@@ -55,7 +55,7 @@ export const ExplorerWithTocPage: QuartzEmitterPlugin = (userOpts) => {
     async emit(ctx, _content, resources): Promise<FilePath[]> {
       const cfg = ctx.cfg.configuration
       const allFiles = _content.map((c) => c[1].data)
-      const slug = joinSegments("blogs") as FullSlug
+      const slug = joinSegments("blogs", "index") as FullSlug
       const title = "Pattern Blogs"
       const [tree, vfile] = defaultProcessedContent({
         slug,
