@@ -11,6 +11,7 @@ interface Options {
 export default ((opts?: Options) => {
   const NavigationLinks: QuartzComponent = (props: QuartzComponentProps) => {
     const links = opts?.links ?? []
+    console.log(links)
     return (
       <nav class="nav-links">
         <button className="menu-btn">
