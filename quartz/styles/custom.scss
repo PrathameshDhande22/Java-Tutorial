@@ -17,6 +17,12 @@ ul.overflow > li:last-of-type {
 
 .page-title {
     @media all and ($mobile) {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+.search .search-button > p {
+    @media all and ($mobile) {
+        display: none;
     }
 }
