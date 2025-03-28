@@ -1,6 +1,12 @@
+@use "../../styles/variables.scss" as *;
+
 .navbar-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+
+    @media all and ($mobile) {
+        flex-direction: row-reverse;
+    }
 }
