@@ -30,7 +30,12 @@ export const sharedPageComponents: SharedLayout = {
       }
     })
   )],
-  afterBody: [],
+  afterBody: [
+    Component.RecentNotes({
+      limit: 5,
+      title: "Recent Patterns"
+    })
+  ],
   footer: Component.Footer({
     links: {
       GitHub: "https://prathameshdhande22.github.io/Java-Tutorial/",
@@ -61,10 +66,7 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     Component.TableOfContents(),
     Component.Backlinks(),
-    Component.DesktopOnly(Component.RecentNotes({
-      limit: 2,
-      title: "Recent Blogs"
-    }))
+
   ]
 }
 
