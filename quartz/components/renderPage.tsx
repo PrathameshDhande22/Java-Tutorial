@@ -10,6 +10,8 @@ import { GlobalConfiguration } from "../cfg"
 import { i18n } from "../i18n"
 // @ts-ignore
 import mermaidScript from "./scripts/mermaid.inline"
+// @ts-ignore
+import scrolltotopScript from "./scripts/scrolltotop.inline"
 import mermaidStyle from "./styles/mermaid.inline.scss"
 import { QuartzPluginData } from "../plugins/vfile"
 
@@ -238,6 +240,31 @@ export function renderPage(
     </div>
   )
 
+  const ScrollToTop = (
+    <button id="scrollToTopBtn" title="Go to top">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+  )
+
+  pageResources.js.push({
+    script: scrolltotopScript,
+    loadTime: "afterDOMReady",
+    moduleType: "module",
+    contentType: "inline",
+  })
+
   const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
   const doc = (
     <html lang={lang} saved-theme="dark">
@@ -259,6 +286,7 @@ export function renderPage(
                     <BodyComponent {...componentData} />
                   ))}
                 </div>
+                {ScrollToTop}
               </div>
               <Content {...componentData} />
               <hr />

@@ -26,3 +26,31 @@ ul.overflow > li:last-of-type {
         display: none;
     }
 }
+
+/* Scroll To Top CSS */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: var(--lightgray);
+    color: white;
+    border: 1px solid var(--darkgray);
+    padding: 3px 5px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#scrollToTopBtn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#scrollToTopBtn:hover {
+    background-color: var(--secondary);
+}
