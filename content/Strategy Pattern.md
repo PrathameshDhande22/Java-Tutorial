@@ -2,8 +2,8 @@
 title: Strategy Pattern
 tags:
   - behavioral
+created: 2025-02-11
 ---
-
 ## Definition
 
 It defines a family of algorithms, encapsulates each one, and makes them interchangeable. The **Strategy Pattern** allows algorithms to vary independently from the clients that use them.
@@ -284,7 +284,7 @@ classDiagram
 
 The `Comparator` interface acts as the Strategy Pattern. By inheriting this interface, you can create your custom comparator, which allows you to sort collections.
 
-```java title:Person.java
+```java title="Person.java"
 class NameComparator implements Comparator<Person> {
     public int compare(Person p1, Person p2) {
         return p1.name.compareTo(p2.name);

@@ -1,5 +1,6 @@
 ---
 title: Design Patterns
+created: 2025-02-07
 ---
 ### What is Design Pattern ?
 
@@ -30,7 +31,7 @@ In software design, **coupling** refers to the degree of dependency between tw
 
 **Example :** 
 Consider a `MessageService` class that sends messages via Email, SMS, or other techniques. The implementation might look like the following code:
-```java title:MessageService.java
+```java title="MessageService.java"
 class MessageService {
 
 	public static void sendMessage(string message){
@@ -48,7 +49,7 @@ These Approach Follows **Dependency Inversion Principle** which is again the par
 
 **Example:**
 In the earlier example, the `MessageService` class was heavily dependent on `EmailClient`. In such cases, if you need to create another service, it becomes inefficient. We can avoid this dependency by passing the `ProviderClient` interface as a parameter to the `sendMessage` method. Then, we implement the `ProviderClient` interface for various provider services.
-```java title:MessageService.java
+```java title="MessageService.java"
 
 // Interface to be implemented by various provider services
 interface ProviderClient {

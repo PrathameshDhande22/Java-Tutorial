@@ -21,15 +21,17 @@ export const sharedPageComponents: SharedLayout = {
     })
   ],
   head: Component.Head(),
-  header: [Component.MobileOnly(
-    Component.Drawer({
-      links: {
-        Blogs: "./blogs",
-        Github: "https://github.com/PrathameshDhande22/Java-Tutorial",
-        "About Me": "https://github.com/PrathameshDhande22"
-      }
-    })
-  )],
+  header: [
+    Component.MobileOnly(
+      Component.Drawer({
+        links: {
+          Blogs: "./blogs",
+          Github: "https://github.com/PrathameshDhande22/Java-Tutorial",
+          "About Me": "https://github.com/PrathameshDhande22"
+        }
+      })
+    )
+  ],
   afterBody: [
     Component.RecentNotes({
       limit: 5,
@@ -66,7 +68,6 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     Component.TableOfContents(),
     Component.Backlinks(),
-
   ]
 }
 

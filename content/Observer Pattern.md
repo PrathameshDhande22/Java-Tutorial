@@ -2,6 +2,7 @@
 title: Observer Pattern
 tags:
   - behavioral
+created: 2025-02-18
 ---
 ## Definition
 
@@ -86,7 +87,7 @@ The Design will look like the Above.
 
 ---
 ### Code in Java
-```java title:Observerpattern.java
+```java title="Observerpattern.java"
 // These is the Subject
 interface Subject {
 	public void registerObserver(Observer o);
@@ -229,7 +230,7 @@ The **Observer Pattern** is commonly used in many libraries and frameworks. For 
 This class allows you to **add or remove observers** easily. You can also create multiple listeners by implementing the `ActionListener` interface.
 
 Below is an example demonstrating this.
-```java title:SwingApp.java
+```java title="SwingApp.java"
 package observer;
 
 import java.awt.Rectangle;

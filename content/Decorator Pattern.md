@@ -2,6 +2,7 @@
 title: Decorator Pattern
 tags:
   - structural
+created: 2025-02-22
 ---
 ## Definition
 
@@ -80,16 +81,14 @@ _Design of the Coffee Shop_
 ---
 ## Coding Decorator Pattern
 
-```java title:Coffee.java
-// Coffee.java
+```java title="Coffee.java"
 interface Coffee {
 	public String getDescription();
 	public int getCost();
 }
 ```
 The `Coffee` interface acts as an **abstraction layer** between the **variety of coffee types**. By implementing this interface, you can create **as many coffee varieties** as needed.
-```java title:PlainCoffee.java
-// PlainCoffee.java
+```java title="PlainCoffee.java"
 class PlainCoffee implements Coffee {
 
 	@Override
@@ -104,8 +103,7 @@ class PlainCoffee implements Coffee {
 }
 ```
 
-```java title:CappuccinoCoffee.java
-// CappuccinoCoffee
+```java title="CappuccinoCoffee.java"
 class CappuccinoCoffee implements Coffee {
 	@Override
 	public String getDescription() {
@@ -119,8 +117,7 @@ class CappuccinoCoffee implements Coffee {
 }
 ```
 In the code example above, the `Coffee` interface is implemented by both the **PlainCoffee** and **CappuccinoCoffee** concrete classes. For each coffee type, we override the methods and assign the **specific cost** for each coffee.
-```java title:CoffeeDecorator.java
-// CoffeeDecorator.java
+```java title="CoffeeDecorator.java"
 abstract class CoffeeDecorator implements Coffee {
 	protected Coffee _coffee;
 
@@ -140,8 +137,7 @@ abstract class CoffeeDecorator implements Coffee {
 }
 ```
 The `CoffeeDecorator` class is the **decorator class** that implements the `Coffee` interface to **decorate different varieties of coffee**. In our case, the **CoffeeDecorator** acts as an **add-on** (e.g., milk, sugar) that can be added to the customer's coffee if requested.
-```java title:MilkDecorator.java
-// MilkDecorator.java
+```java title="MilkDecorator.java"
 class MilkDecorator extends CoffeeDecorator {
 	public MilkDecorator(Coffee decoratedcoffee) {
 		super(decoratedcoffee);
@@ -159,8 +155,7 @@ class MilkDecorator extends CoffeeDecorator {
 }
 ```
 
-```java title:SugarDecorator.java
-// SugarDecorator.java
+```java title="SugarDecorator.java"
 class SugarDecorator extends CoffeeDecorator {
 	public SugarDecorator(Coffee decoratedCoffee) {
 		super(decoratedCoffee);
@@ -178,7 +173,7 @@ class SugarDecorator extends CoffeeDecorator {
 }
 ```
 When creating coffee objects, you can **layer decorators** as needed. For example, a **Cappuccino** with **milk and sugar** is created by **wrapping the decorators** around the base coffee object.
-```java title:DecoratorPattern.java
+```java title="DecoratorPattern.java"
 public class DecoratorPattern {
 	public static void main(String[] args) {
 		Coffee plaincoffee = new PlainCoffee();
@@ -199,7 +194,7 @@ Cappuccino + Milk + Sugar Cost=35
 ```
 ---
 ## Complete Code In Java
-```java title:Decorator.java
+```java title="Decorator.java"
 package decorator;
 
 // Coffee.java
@@ -307,7 +302,7 @@ public class DecoratorPattern {
 
 The Java I/O library is a textbook example of the Decorator Pattern. The base classes such as `InputStream` and `OutputStream` are extended by concrete classes (like `FileInputStream`) and then wrapped by decorator classes that add additional functionality at runtime.
 
-```java title:StreamInput.java
+```java title="StreamInput.java"
 // Base stream reading from a file
 InputStream fileStream = new FileInputStream("data.txt");
 
