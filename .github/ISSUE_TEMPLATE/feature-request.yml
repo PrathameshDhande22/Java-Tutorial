@@ -1,6 +1,8 @@
 name: "Feature Request"
 description: "Suggest a new feature or a change to an existing feature."
 labels: ["feature request"]
+assignees: "PrathameshDhande22"
+title: "Feature: "
 body:
   - type: dropdown
     id: feature_type
