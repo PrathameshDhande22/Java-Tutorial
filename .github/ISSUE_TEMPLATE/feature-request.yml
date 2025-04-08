@@ -13,15 +13,6 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: title
-    attributes:
-      label: "Title"
-      description: "Provide a short and clear title for the feature request."
-      placeholder: "E.g., Add dark mode support"
-    validations:
-      required: true
-
   - type: textarea
     id: feature_request
     attributes:
