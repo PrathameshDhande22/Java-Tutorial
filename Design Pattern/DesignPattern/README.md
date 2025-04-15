@@ -8,6 +8,7 @@ View the Complete Docs regarding the Design Pattern [View Docs](https://prathame
 
 1. Strategy Pattern.
 2. Observer Pattern.
-3. Decorator Pattern
+3. Decorator Pattern.
+4. Factory Method Pattern
 
 ### Author: Prathamesh Dhande
