@@ -1,6 +1,8 @@
 name: "Bug Report"
 description: "Report a bug or issue with the project."
 labels: ["bug"]
+assignees: "PrathameshDhande22"
+title: "Bug: "
 body:
   - type: textarea
     id: describe
