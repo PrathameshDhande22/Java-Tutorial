@@ -1,5 +1,5 @@
 ---
-title: Design Patterns
+title: Factory Method Pattern
 created: 2025-04-10
 tags:
   - creational
