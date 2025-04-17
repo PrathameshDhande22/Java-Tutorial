@@ -44,7 +44,7 @@ abstract class PizzaStore {
 	}
 
 	// Abstract method for creating a pizza of a given type
-	abstract public Pizza createPizza(String type);
+	abstract protected Pizza createPizza(String type);
 }
 
 // New York Style Pizzas
@@ -90,7 +90,7 @@ class ChicagoStylePaneerPizza extends Pizza {
 // Pizza store for New York style pizzas.
 class NyPizzaStore extends PizzaStore {
 	@Override
-	public Pizza createPizza(String type) {
+	protected Pizza createPizza(String type) {
 		if (type.equalsIgnoreCase("cheese")) {
 			return new NyStyleCheesePizza();
 		} else if (type.equalsIgnoreCase("mayonnaise")) {
@@ -103,7 +103,7 @@ class NyPizzaStore extends PizzaStore {
 // Pizza store for Chicago style pizzas.
 class ChicagoPizzaStore extends PizzaStore {
 	@Override
-	public Pizza createPizza(String type) {
+	protected Pizza createPizza(String type) {
 		if (type.equalsIgnoreCase("schezwan")) {
 			return new ChicagostyleSchezwanPizza();
 		} else if (type.equalsIgnoreCase("paneer")) {
