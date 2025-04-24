@@ -149,15 +149,15 @@ classDiagram
     class PizzaStore {
       <<abstract>>
       +orderPizza(String type)
-      +createPizza(String type)
+      +createPizza(String type) Pizza
     }
     
     class NyPizzaStore {
-      +createPizza(String type)
+      +createPizza(String type) Pizza
     }
     
     class ChicagoPizzaStore {
-      +createPizza(String type)
+      +createPizza(String type) Pizza
     }
     
     PizzaStore <|-- NyPizzaStore
@@ -250,4 +250,4 @@ Pizza has been cut.
 Pizza is boxed and ready for delivery.
 ```
 ---
-Next, we will discuss the Abstract Factory Pattern.
+Next, we will discuss the [[Abstract Factory Pattern]].
