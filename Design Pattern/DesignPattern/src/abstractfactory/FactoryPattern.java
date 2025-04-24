@@ -1,21 +1,21 @@
 package abstractfactory;
 
-// Interface for Creating the Dough
+// Interface for creating Dough
 interface Dough {
 	public String getName();
 }
 
-// Interface for Creating the Sauce based on their regional style
+// Interface for creating Sauce based on regional style
 interface Sauce {
 	public String getSauce();
 }
 
-// Interface for Creating Cheese based on their regional style.
+// Interface for creating Cheese based on regional style
 interface Cheese {
 	public String getCheese();
 }
 
-// Creating the Dough, Sauce and Cheese based on Newyork Style
+// Creating Dough, Sauce, and Cheese based on New York style
 class ThinCrustDough implements Dough {
 	@Override
 	public String getName() {
@@ -37,7 +37,7 @@ class MarinaraSauce implements Sauce {
 	}
 }
 
-// Creating the Dough, Sauce and Cheese for Chicago Pizza Store
+// Creating Dough, Sauce, and Cheese for the Chicago Pizza Store
 class MozzarellaCheese implements Cheese {
 	@Override
 	public String getCheese() {
@@ -55,11 +55,11 @@ class ThickCrustDough implements Dough {
 class PlumTomatoSauce implements Sauce {
 	@Override
 	public String getSauce() {
-		return "PlumtomatoSauce - ChicagoStore";
+		return "PlumTomatoSauce - ChicagoStore";
 	}
 }
 
-// Creating the Interface for PizzaIngredientFactory
+// Creating the interface for PizzaIngredientFactory
 interface PizzaIngredientFactory {
 	public Dough createDough();
 
@@ -68,9 +68,8 @@ interface PizzaIngredientFactory {
 	public Cheese createCheese();
 }
 
-// Creating the PizzaIngredientFactory for NYPizzaStore
+// PizzaIngredientFactory implementation for NYPizzaStore
 class NYPizzaIngredientFactory implements PizzaIngredientFactory {
-
 	@Override
 	public Dough createDough() {
 		return new ThinCrustDough();
@@ -87,9 +86,8 @@ class NYPizzaIngredientFactory implements PizzaIngredientFactory {
 	}
 }
 
-// Creating the PizzaIngredientFactory for ChicagoPizzaStore
+// PizzaIngredientFactory implementation for ChicagoPizzaStore
 class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
-
 	@Override
 	public Dough createDough() {
 		return new ThickCrustDough();
@@ -106,14 +104,14 @@ class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
 	}
 }
 
+// Base class for creating a Pizza
 abstract class PizzaBase {
 	public String name;
 	public Dough dough;
 	public Sauce sauce;
 	public Cheese cheese;
 
-	// Every Pizza Can Create their Own Pizza by using their own Dough, Sauce and
-	// Cheese
+	// Each Pizza can create its own ingredients using a regional factory
 	abstract public void prepare();
 
 	// Bakes the pizza by printing the baking message
@@ -132,45 +130,45 @@ abstract class PizzaBase {
 	}
 }
 
-// Creating the Cheese Pizza
+// Cheese Pizza class
 class CheesePizza extends PizzaBase {
-	// Instance for storing the ingredientfactory
-	private PizzaIngredientFactory ingredientfactory;
+	// Stores the reference to the ingredient factory
+	private PizzaIngredientFactory ingredientFactory;
 
 	public CheesePizza(PizzaIngredientFactory factory) {
-		this.ingredientfactory = factory;
-		this.name="Cheese Pizza";
+		this.ingredientFactory = factory;
+		this.name = "Cheese Pizza";
 	}
 
 	@Override
 	public void prepare() {
-		System.out.println("Perparing Pizza " + this.name);
-		this.cheese = this.ingredientfactory.createCheese();
-		this.sauce = this.ingredientfactory.createSauce();
-		this.dough = this.ingredientfactory.createDough();
+		System.out.println("Preparing Pizza: " + this.name);
+		this.cheese = this.ingredientFactory.createCheese();
+		this.sauce = this.ingredientFactory.createSauce();
+		this.dough = this.ingredientFactory.createDough();
 	}
 }
 
-// Creating the Schezwan Pizza
+// Schezwan Pizza class
 class SchezwanPizza extends PizzaBase {
-	// Instance for storing the ingredientfactory
-	private PizzaIngredientFactory ingredientfactory;
+	// Stores the reference to the ingredient factory
+	private PizzaIngredientFactory ingredientFactory;
 
 	public SchezwanPizza(PizzaIngredientFactory factory) {
-		this.ingredientfactory = factory;
-		this.name="SchezwanPizza";
+		this.ingredientFactory = factory;
+		this.name = "Schezwan Pizza";
 	}
 
 	@Override
 	public void prepare() {
-		System.out.println("Perparing Pizza " + this.name);
-		this.cheese = this.ingredientfactory.createCheese();
-		this.sauce = this.ingredientfactory.createSauce();
-		this.dough = this.ingredientfactory.createDough();
+		this.cheese = this.ingredientFactory.createCheese();
+		this.sauce = this.ingredientFactory.createSauce();
+		this.dough = this.ingredientFactory.createDough();
+		System.out.println("Preparing Pizza: " + this.name + " " + this.cheese.getCheese());
 	}
 }
 
-//Base class for Pizza Store
+// Base class for Pizza Store
 abstract class PizzaStore1 {
 
 	// Processes the order by creating the pizza and performing the standard steps
@@ -190,31 +188,31 @@ abstract class PizzaStore1 {
 	abstract protected PizzaBase createPizza(String type);
 }
 
-// Providing these Pizza into their respective stores with the Ingredient Factory.
+// New York Pizza Store using its specific ingredient factory
 class NyPizzaStore1 extends PizzaStore1 {
-	private PizzaIngredientFactory ingredientfactory = new NYPizzaIngredientFactory();
+	private PizzaIngredientFactory ingredientFactory = new NYPizzaIngredientFactory();
 
 	@Override
 	protected PizzaBase createPizza(String type) {
 		if (type.equalsIgnoreCase("cheese")) {
-			return new CheesePizza(ingredientfactory);
+			return new CheesePizza(ingredientFactory);
 		} else if (type.equalsIgnoreCase("schezwan")) {
-			return new SchezwanPizza(ingredientfactory);
+			return new SchezwanPizza(ingredientFactory);
 		}
 		return null;
 	}
 }
 
-// Providing these pizza into their respective Stores with the Ingredient factory
+// Chicago Pizza Store using its specific ingredient factory
 class ChicagoPizzaStore1 extends PizzaStore1 {
-	private PizzaIngredientFactory ingredientfactory = new ChicagoPizzaIngredientFactory();
+	private PizzaIngredientFactory ingredientFactory = new ChicagoPizzaIngredientFactory();
 
 	@Override
 	protected PizzaBase createPizza(String type) {
 		if (type.equalsIgnoreCase("cheese")) {
-			return new CheesePizza(ingredientfactory);
+			return new CheesePizza(ingredientFactory);
 		} else if (type.equalsIgnoreCase("schezwan")) {
-			return new SchezwanPizza(ingredientfactory);
+			return new SchezwanPizza(ingredientFactory);
 		}
 		return null;
 	}
@@ -222,11 +220,12 @@ class ChicagoPizzaStore1 extends PizzaStore1 {
 
 public class FactoryPattern {
 	public static void main(String[] args) {
-		// Ordering the Pizza from the Newyork store
-		PizzaStore1 pizzastore = new NyPizzaStore1();
-		pizzastore.orderPizza("cheese");
+		// Ordering pizza from the New York store
+		PizzaStore1 nyStore = new NyPizzaStore1();
+		nyStore.orderPizza("cheese");
 
-		PizzaStore1 chicagostore = new ChicagoPizzaStore1();
-		chicagostore.orderPizza("schezwan");
+		// Ordering pizza from the Chicago store
+		PizzaStore1 chicagoStore = new ChicagoPizzaStore1();
+		chicagoStore.orderPizza("schezwan");
 	}
 }
