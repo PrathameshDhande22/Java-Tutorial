@@ -10,5 +10,6 @@ View the Complete Docs regarding the Design Pattern [View Docs](https://prathame
 2. Observer Pattern.
 3. Decorator Pattern.
 4. Factory Method Pattern
+5. Abstract Factory Pattern
 
 ### Author: Prathamesh Dhande
