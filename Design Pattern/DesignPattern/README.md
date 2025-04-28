@@ -11,5 +11,6 @@ View the Complete Docs regarding the Design Pattern [View Docs](https://prathame
 3. Decorator Pattern.
 4. Factory Method Pattern
 5. Abstract Factory Pattern
+6. Singleton Pattern
 
 ### Author: Prathamesh Dhande
