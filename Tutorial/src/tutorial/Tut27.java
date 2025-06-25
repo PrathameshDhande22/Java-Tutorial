@@ -16,7 +16,7 @@ public class Tut27 {
 		Thread th = new Thread(th1); // creates the thread class
 		th.start();
 		//methods in thread
-		System.out.println(th.getId());
+		System.out.println(th.threadId());
 		System.out.println(th.getName());
 		System.out.println(th.getPriority());
 		System.out.println(th.getState());
