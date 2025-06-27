@@ -123,6 +123,7 @@ Consider an `SQLManager` class that performs CRUD operations. It has an `ILogger
 4. [[Factory Method Pattern]]
 5. [[Abstract Factory Pattern]]
 6. [[Singleton Pattern]]
+7. [[Command Pattern]]
 
 ---
 > [!Note] 
