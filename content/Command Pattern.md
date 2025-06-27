@@ -1,5 +1,5 @@
 ---
-title: Strategy Pattern
+title: Command Pattern
 tags:
   - behavioral
 created: 2025-06-27
