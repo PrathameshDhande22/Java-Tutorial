@@ -12,5 +12,6 @@ View the Complete Docs regarding the Design Pattern [View Docs](https://prathame
 4. Factory Method Pattern
 5. Abstract Factory Pattern
 6. Singleton Pattern
+7. Command Pattern
 
 ### Author: Prathamesh Dhande
