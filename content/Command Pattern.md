@@ -137,7 +137,7 @@ _Design of the Remote Control_
 
 First, create the `Command.java` interface. This defines what every Command must do:
 
-```java
+```java title="Command.java"
 interface Command {
     public void execute();
     public void undo();
@@ -146,7 +146,7 @@ interface Command {
 
 Next, make the Receiver classes. A Receiver carries out the real work.
 
-```java
+```java title="Light.java"
 class Light {
     public void off() {
         System.out.println("Light is Turned Off");
@@ -158,7 +158,7 @@ class Light {
 }
 ```
 
-```java
+```java title="LivingRoom.java"
 class LivingRoom {
     public void off() {
         System.out.println("Living Room Light is turned off");
@@ -178,7 +178,7 @@ class LivingRoom {
 }
 ```
 
-```java
+```java title="CeilingFan.java"
 class CeilingFan {
     public static final int OFF = 0;
     public static final int HIGH = 3;
@@ -214,7 +214,7 @@ class CeilingFan {
 
 Now write the concrete Command classes. Each one wraps a Receiver and calls its methods.
 
-```java
+```java title"LightOnCommand.java"
 class LightOnCommand implements Command {
     private Light light;
 
@@ -239,7 +239,7 @@ class LightOnCommand implements Command {
 }
 ```
 
-```java
+```java title="LightOffCommand.java"
 class LightOffCommand implements Command {
     private Light light;
 
@@ -264,7 +264,7 @@ class LightOffCommand implements Command {
 }
 ```
 
-```java
+```java title="LivingRoomOnCommand.java"
 class LivingRoomOnCommand implements Command {
     private LivingRoom livingroom;
 
@@ -291,7 +291,7 @@ class LivingRoomOnCommand implements Command {
 }
 ```
 
-```java
+```java title="LivingRoomOffCommand.java"
 class LivingRoomOffCommand implements Command {
     private LivingRoom livingroom;
 
@@ -322,7 +322,7 @@ You would follow the same pattern for the CeilingFan commands.
 
 Finally, put everything together in the Invoker:
 
-```java
+```java title="RemoteControl.java"
 class RemoteControl {
     private Command[] onCommands;
     private Command[] offCommands;
