@@ -13,5 +13,7 @@ View the Complete Docs regarding the Design Pattern [View Docs](https://prathame
 5. Abstract Factory Pattern
 6. Singleton Pattern
 7. Command Pattern
+8. Adapter Pattern
+9. Facade Pattern
 
 ### Author: Prathamesh Dhande
