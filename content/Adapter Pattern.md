@@ -1,5 +1,5 @@
 ---
-title: Abstract Factory Pattern
+title: Adapter Pattern
 created: 2025-07-30
 tags:
   - structural
@@ -60,7 +60,7 @@ classDiagram
     TurkeyAdapter --> Turkey : adapts
 ```
 
-_Design diagram showing how `TurkeyAdapter` adapts a `Turkey` to the `Duck` interface._
+_Class diagram showing how `TurkeyAdapter` adapts a `Turkey` to the `Duck` interface._
 
 ---
 ## Implementation In Java
