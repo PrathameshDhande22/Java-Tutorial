@@ -15,5 +15,6 @@ View the Complete Docs regarding the Design Pattern [View Docs](https://prathame
 7. Command Pattern
 8. Adapter Pattern
 9. Facade Pattern
+10. Template Pattern
 
 ### Author: Prathamesh Dhande
