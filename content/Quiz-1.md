@@ -184,4 +184,3 @@ You are designing a **shopping cart system**.
 > - Each discount (percentage, flat, BOGO) can **wrap** the existing discount and add its own behavior.  
 > - This allows stacking and combining discounts flexibly.  
 
----
