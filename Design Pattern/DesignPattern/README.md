@@ -16,5 +16,7 @@ View the Complete Docs regarding the Design Pattern [View Docs](https://prathame
 8. Adapter Pattern
 9. Facade Pattern
 10. Template Method Pattern
+11. Iterator Pattern
+12. Composite Pattern
 
 ### Author: Prathamesh Dhande
