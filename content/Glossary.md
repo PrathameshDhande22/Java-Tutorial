@@ -24,5 +24,7 @@ The **Adapter Pattern** is a structural design pattern that allows incompatible 
 The **Facade Pattern** is a structural design pattern that provides a simplified, unified interface to a complex subsystem, making it easier for clients to interact with the system without dealing with its internal complexity.
 ### 10. Iterator Pattern
 The **Iterator Pattern** is a behavioral design pattern that provides a way to access elements of a collection sequentially without exposing its underlying representation, allowing uniform traversal of different collection types.
+### 11. Composite Pattern
+The **Composite Pattern** is a structural design pattern that lets you compose objects into tree-like structures to represent part-whole hierarchies, allowing clients to treat individual objects and groups of objects uniformly.
 
-_more Comming soon_
+_more Coming soon_
