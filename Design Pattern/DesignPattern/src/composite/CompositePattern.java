@@ -112,7 +112,7 @@ public class CompositePattern {
 
         manager1.addEmployee(teamlead1);
         manager2.addEmployee(teamlead2);
-        manager2.addEmployee(teamlead2);
+        manager2.addEmployee(teamlead1);
 
         teamlead1.addEmployee(developer1);
         teamlead1.addEmployee(developer2);
