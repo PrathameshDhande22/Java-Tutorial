@@ -129,7 +129,8 @@ Consider an `SQLManager` class that performs CRUD operations. It has an `ILogger
 10. [[Quiz-1]]
 11. [[Iterator Pattern]]
 12. [[Composite Pattern]]
-13. [[Glossary]]
+13. [[State Pattern]]
+14. [[Glossary]]
 
 ---
 > [!Note] 

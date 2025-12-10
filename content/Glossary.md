@@ -26,5 +26,7 @@ The **Facade Pattern** is a structural design pattern that provides a simplified
 The **Iterator Pattern** is a behavioral design pattern that provides a way to access elements of a collection sequentially without exposing its underlying representation, allowing uniform traversal of different collection types.
 ### 11. Composite Pattern
 The **Composite Pattern** is a structural design pattern that lets you compose objects into tree-like structures to represent part-whole hierarchies, allowing clients to treat individual objects and groups of objects uniformly.
+### 12. State Pattern
+The **State Pattern** is a behavioral design pattern that allows an object to change its behavior when its internal state changes. Instead of using large conditionals to determine behavior, the pattern encapsulates state-specific logic into separate classes. 
 
 _more Coming soon_
