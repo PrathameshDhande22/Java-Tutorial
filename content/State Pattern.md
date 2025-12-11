@@ -14,9 +14,10 @@ The **State Pattern** allows and object to alter its behavior and when its inter
 To truly understand the power of the State Pattern, let's look at a classic mechanical device: the **Gumball Machine**.
 
 > [!QUESTION] What is a Gumball Machine?
-A Gumball Machine is a coin-operated vending device commonly found in malls and arcades. It has a simple purpose: you give it a coin, and it gives you a round candy.
+>A Gumball Machine is a coin-operated vending device commonly found in malls and arcades. It has a simple purpose: you give it a coin, and it gives you a round candy.
 
 **How does it work?**
+
 The user interaction is straightforward:
 1. **Insert Coin:** You insert a quarter into the slot.
 2. **Turn Crank:** You rotate the knob.
@@ -38,11 +39,13 @@ The complete state flow is visualized below:
 [Note: Ensure this image displays the transition diagram between states]
 
 **How the States Flow:**
+
 The machine begins in the No Quarter state, waiting for a customer. When a coin is inserted, it transitions to the Has Quarter state. From here, if the user turns the crank, the machine usually moves to the Sold state to dispense candy. However, we also have a "lucky" feature: sometimes, the machine transitions to a Winner state, awarding two gumballs.
 
 After dispensing, the machine checks its inventory. If gumballs remain, it resets to **No Quarter**. If the inventory is empty, it transitions to **Out of Gumballs**, where it ceases to accept coins until refilled.
 
 **Why not use switch or if-else?**
+
 A naive implementation might use a massive conditional structure (e.g., if (state == HAS_QUARTER) ...). However, this leads to spaghetti code. Every time we add a new state (like "Winner"), we would have to modify every single method in the class, violating the Open/Closed Principle. The State Pattern solves this by encapsulating behavior within specific state classes.
 
 ---
@@ -225,7 +228,7 @@ class GumballMachine {
 ```
 
 The `SoldOutState` represents the machine when it is empty. In this state, the machine is effectively locked. It rejects coins and turning the crank does nothing.
-```
+```java title="SoldOutState.java"
 class SoldOutState implements State {
     private final GumballMachine gumballMachine;
 
