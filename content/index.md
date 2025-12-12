@@ -7,9 +7,11 @@ created: 2025-02-07
 **Design patterns** are typical solutions to commonly occurring problems in software design. They are like pre-made blueprints that you can customize to solve a recurring design problem in your code.
 ## Three Main Patterns
 
-- **Creational patterns** provide object creation mechanisms that increase flexibility and reuse of existing code.  #creational 
+- **Creational patterns** provide object creation mechanisms that increase flexibility and reuse of existing code.   	      **Purpose**: How Objects are created. #creational 
 - **Structural patterns** explain how to assemble objects and classes into larger structures, while keeping these structures flexible and efficient. #structural 
+    **Purpose:** Organize classes and objects to form bigger structures safely.
 - **Behavioral patterns** take care of effective communication and the assignment of responsibilities between objects. #behavioral 
+    **Purpose:** How objects communicate and behave with each other. 
 
 > [!Important] Prerequisite
 >Must have knowledge of **OOPS (Object-Oriented Programming Principles)** and **Java**. The design patterns are primarily based on OOPS concepts. The code in this tutorial is mainly written in Java and related frameworks.
