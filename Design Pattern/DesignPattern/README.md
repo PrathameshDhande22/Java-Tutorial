@@ -18,5 +18,7 @@ View the Complete Docs regarding the Design Pattern [View Docs](https://prathame
 10. Template Method Pattern
 11. Iterator Pattern
 12. Composite Pattern
+13. State Pattern
+14. Proxy Pattern
 
 ### Author: Prathamesh Dhande
