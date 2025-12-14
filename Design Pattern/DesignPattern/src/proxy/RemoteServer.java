@@ -12,7 +12,7 @@ public class RemoteServer {
         String location = "localhost";
         try {
             remote = new GumballMachine(location, count);
-            Naming.rebind("//" + location + "/gumballmachine", remote);
+            Naming.rebind("rmi://" + location + "/gumballmachine", remote);
         } catch (Exception e) {
             e.printStackTrace();
         }
