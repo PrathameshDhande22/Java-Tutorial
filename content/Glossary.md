@@ -28,5 +28,7 @@ The **Iterator Pattern** is a behavioral design pattern that provides a way to a
 The **Composite Pattern** is a structural design pattern that lets you compose objects into tree-like structures to represent part-whole hierarchies, allowing clients to treat individual objects and groups of objects uniformly.
 ### 12. State Pattern
 The **State Pattern** is a behavioral design pattern that allows an object to change its behavior when its internal state changes. Instead of using large conditionals to determine behavior, the pattern encapsulates state-specific logic into separate classes. 
+### 13. Proxy Pattern
+**Proxy Pattern** is a structural design pattern that provides a stand-in (proxy) object for another object, allowing you to control access to the original object. The proxy exposes the same interface as the real object and can add additional behavior, such as access control, lazy initialization, logging, caching, or remote communication, before or after delegating requests to the actual object.
 
 _more Coming soon_
