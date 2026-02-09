@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+// enum for Defining the Log Level
 enum LogLevel {
     INFO,
     WARNING,
@@ -12,7 +13,7 @@ enum LogLevel {
     ERROR
 }
 
-
+// Defines the contract for logging with different severity levels to ensure consistent logging interface across implementations.
 interface Logger {
     void loginfo(String message);
 
@@ -23,6 +24,7 @@ interface Logger {
     void logdebug(String message);
 }
 
+// Manages a collection of loggers and provides iteration capability to apply logging operations across multiple logger instances.
 class LoggerCollection implements Iterable<BaseLogger> {
     private ArrayList<BaseLogger> loggers = new ArrayList<>();
 
@@ -36,6 +38,7 @@ class LoggerCollection implements Iterable<BaseLogger> {
     }
 }
 
+// Abstract base class that implements the Logger interface and provides common functionality for delegating log messages to multiple loggers using the Composite pattern.
 abstract class BaseLogger implements Logger {
     public abstract void write(String message, LogLevel level);
 
@@ -79,6 +82,7 @@ abstract class BaseLogger implements Logger {
     }
 }
 
+// Concrete logger implementation that writes log messages to the console for real-time visibility of application events.
 class ConsoleLogger extends BaseLogger {
 
     @Override
@@ -87,13 +91,14 @@ class ConsoleLogger extends BaseLogger {
     }
 }
 
+// Concrete logger implementation that persists log messages to a file for permanent record and future analysis of application behavior.
 class FileLogger extends BaseLogger {
 
     @Override
     public void write(String message, LogLevel level) {
         try {
             FileWriter writer = new FileWriter("./app.log",true);
-            writer.write("%s - %s".formatted(level.toString(), message
+            writer.write("%s - %s\n".formatted(level.toString(), message
             ));
             writer.close();
         } catch (IOException e) {
@@ -103,6 +108,7 @@ class FileLogger extends BaseLogger {
     }
 }
 
+// Concrete logger implementation that formats and outputs log messages with an application-specific prefix for identification.
 class ApplicationLogger extends BaseLogger {
     @Override
     public void write(String message, LogLevel level) {
@@ -110,6 +116,7 @@ class ApplicationLogger extends BaseLogger {
     }
 }
 
+// Factory pattern implementation that creates and maintains a singleton logger instance with multiple composed loggers for unified logging across the application.
 class LoggerFactory {
     private static Logger logger;
 
@@ -125,6 +132,7 @@ class LoggerFactory {
     }
 }
 
+// Main entry point that demonstrates the compound logger system by logging messages at different severity levels through multiple logger implementations.
 public class Logging {
     public static void main(String[] args) {
         Logger logger = LoggerFactory.getLogger();
