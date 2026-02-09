@@ -26,7 +26,7 @@ interface Logger {
 
 // Manages a collection of loggers and provides iteration capability to apply logging operations across multiple logger instances.
 class LoggerCollection implements Iterable<BaseLogger> {
-    private ArrayList<BaseLogger> loggers = new ArrayList<>();
+    private final ArrayList<BaseLogger> loggers = new ArrayList<>();
 
     public void addLogger(BaseLogger logger) {
         this.loggers.add(logger);
