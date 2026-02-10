@@ -20,5 +20,6 @@ View the Complete Docs regarding the Design Pattern [View Docs](https://prathame
 12. Composite Pattern
 13. State Pattern
 14. Proxy Pattern
+15. Compound Pattern
 
 ### Author: Prathamesh Dhande
