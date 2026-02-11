@@ -138,7 +138,9 @@ Consider an `SQLManager` class that performs CRUD operations. It has an `ILogger
 13. [[State Pattern]]
 14. [[Proxy Pattern]]
 15. [[Compound Pattern]]
-16. [[Glossary]]
+16. [[Best Practices]]
+17. [[Quiz-2]]
+18. [[Glossary]]
 
 ---
 > [!Note] 
