@@ -32,5 +32,7 @@ The **State Pattern** is a behavioral design pattern that allows an object to ch
 **Proxy Pattern** is a structural design pattern that provides a stand-in (proxy) object for another object, allowing you to control access to the original object. The proxy exposes the same interface as the real object and can add additional behavior, such as access control, lazy initialization, logging, caching, or remote communication, before or after delegating requests to the actual object.
 ### 14. Compound Pattern
 A **Compound Pattern** is a combination of two or more design patterns that work together to solve a larger or more complex problem.
+### 15. Bridge Pattern
+The **Bridge Pattern** is a structural design pattern that divides business logic or huge class into separate class hierarchies that can be developed independently.
 
 _more Coming soon_
