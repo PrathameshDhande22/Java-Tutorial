@@ -75,12 +75,12 @@ Finally, remember that **design patterns are guidelines, not strict rules**. Rea
   **Core idea:** Combine several design patterns to solve a complex problem in a structured way.
 
 - [[Builder Pattern]] :
-  **Trigger clue:** “Too many constructor parameters”
-  **Core idea:** Build objects step by step and include only required fields.
+   **Trigger clue:** “Too many constructor parameters”
+   **Core idea:** Build objects step by step and include only required fields.
 
 -  [[Bridge Pattern]] :
-   **Trigger clue:** “Separate abstraction from implementation”
-   **Core idea:** Split abstraction and implementation so both can change independently.
+    **Trigger clue:** “Separate abstraction from implementation”
+    **Core idea:** Split abstraction and implementation so both can change independently.
    
 - [[Chain of Responsibility Pattern]] :  
    **Trigger clue:** “Pass request through multiple handlers”.  
