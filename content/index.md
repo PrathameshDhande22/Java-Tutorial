@@ -142,7 +142,8 @@ Consider an `SQLManager` class that performs CRUD operations. It has an `ILogger
 17. [[Quiz-2]]
 18. [[Bridge Pattern]]
 19. [[Builder Pattern]]
-20. [[Glossary]]
+20. [[Chain of Responsibility Pattern]]
+21. [[Glossary]]
 
 ---
 > [!Note] 

@@ -36,5 +36,7 @@ A **Compound Pattern** is a combination of two or more design patterns that work
 The **Bridge Pattern** is a structural design pattern that divides business logic or huge class into separate class hierarchies that can be developed independently.
 ### 16. Builder Pattern
 The **Builder Pattern** is a creational design pattern that constructs complex objects step by step, allowing you to create different representations of the same object using the same construction process.
+### 17. Chain of Responsibility Pattern
+**Chain of Responsibility (CoR) Pattern** is a behavioral design pattern where a request is passed through a chain of handlers, and each handler decides whether to process it or pass it to the next handler.
 
 _more Coming soon_

@@ -81,3 +81,7 @@ Finally, remember that **design patterns are guidelines, not strict rules**. Rea
 -  [[Bridge Pattern]] :
    **Trigger clue:** “Separate abstraction from implementation”
    **Core idea:** Split abstraction and implementation so both can change independently.
+   
+- [[Chain of Responsibility Pattern]] :  
+   **Trigger clue:** “Pass request through multiple handlers”.  
+   **Core idea:** Send a request through a chain of handlers where each handler decides to process it or pass it to the next.
