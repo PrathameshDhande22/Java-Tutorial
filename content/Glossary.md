@@ -38,5 +38,7 @@ The **Bridge Pattern** is a structural design pattern that divides business logi
 The **Builder Pattern** is a creational design pattern that constructs complex objects step by step, allowing you to create different representations of the same object using the same construction process.
 ### 17. Chain of Responsibility Pattern
 **Chain of Responsibility (CoR) Pattern** is a behavioral design pattern where a request is passed through a chain of handlers, and each handler decides whether to process it or pass it to the next handler.
+### 18. Flyweight Pattern
+The **Flyweight Pattern** is a structural design pattern that reduces memory usage by sharing common data between multiple objects instead of storing duplicate data in each object. It separates shared data from unique data, allowing efficient handling of large numbers of similar objects.
 
 _more Coming soon_

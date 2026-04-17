@@ -85,3 +85,7 @@ Finally, remember that **design patterns are guidelines, not strict rules**. Rea
 - [[Chain of Responsibility Pattern]] :  
    **Trigger clue:** “Pass request through multiple handlers”.  
    **Core idea:** Send a request through a chain of handlers where each handler decides to process it or pass it to the next.
+
+- [[Flyweight Pattern]] :  
+   **Trigger clue:** “Large number of similar objects”.
+   **Core idea:** Share common data between multiple objects to reduce memory usage instead of storing duplicate data in each object.
