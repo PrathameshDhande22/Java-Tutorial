@@ -21,5 +21,10 @@ View the Complete Docs regarding the Design Pattern [View Docs](https://prathame
 13. State Pattern
 14. Proxy Pattern
 15. Compound Pattern
+16. Builder Pattern
+17. Bridge Pattern
+18. Chain of Responsibility Pattern
+19. Flyweight Pattern
+20. Interpreter Pattern
 
 ### Author: Prathamesh Dhande
