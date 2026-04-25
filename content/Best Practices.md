@@ -89,3 +89,7 @@ Finally, remember that **design patterns are guidelines, not strict rules**. Rea
 - [[Flyweight Pattern]] :  
    **Trigger clue:** “Large number of similar objects”.
     **Core idea:** Share common data between multiple objects to reduce memory usage instead of storing duplicate data in each object.
+
+- [[Interpreter Pattern]] :  
+   **Trigger clue:** “Evaluate expressions”, “Custom language or grammar”, “Expression tree”  
+   **Core idea:** Represent a language’s grammar as classes and interpret expressions by evaluating them recursively.
