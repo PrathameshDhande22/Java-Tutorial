@@ -93,3 +93,7 @@ Finally, remember that **design patterns are guidelines, not strict rules**. Rea
 - [[Interpreter Pattern]] :  
    **Trigger clue:** “Evaluate expressions”, “Custom language or grammar”, “Expression tree”  
    **Core idea:** Represent a language’s grammar as classes and interpret expressions by evaluating them recursively.
+   
+- [[Mediator Pattern]] :  
+  **Trigger clue:** “Many objects communicating with each other”, “Reduce direct dependencies”  
+   **Core idea:** Centralize communication between objects through a mediator to reduce coupling between them.
