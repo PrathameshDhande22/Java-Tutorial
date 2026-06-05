@@ -26,5 +26,8 @@ View the Complete Docs regarding the Design Pattern [View Docs](https://prathame
 18. Chain of Responsibility Pattern
 19. Flyweight Pattern
 20. Interpreter Pattern
+21. Mediator Pattern
+22. Memento Pattern
 
 ### Author: Prathamesh Dhande
+
