@@ -2,6 +2,11 @@
 
 This repository is cloned from the [Quartz repository](https://github.com/jackyzha0/quartz) and has been modified according to our needs.
 
+
+> [!IMPORTANT]
+> No Further Updates will be made in these website due to migration of these Website. In Future we are going to move from [Quartz](https://quartz.jzhao.xyz/) to [Astro](https://astro.build/) for more better SEO and migration Changes. But Contents or article regarding the Design patterns will be uploaded/posted.
+
+
 ## Running Locally
 
 To run the website locally, use:

@@ -46,5 +46,7 @@ The **Interpreter Pattern** is a behavioral design pattern that represents a lan
 **Mediator Pattern** is a behavioral design pattern that centralizes communication between objects through a mediator, so objects do not communicate with each other directly.
 ### 21. Memento Pattern
 **Memento Pattern** is a behavioral design pattern that saves an object's state so it can be restored later without exposing its internal details.
+### 22. Prototype Pattern
+**Prototype Pattern** is a creational design pattern that creates new objects by cloning an existing object instead of creating them from scratch.
 
 _more Coming soon_

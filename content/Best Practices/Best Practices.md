@@ -101,3 +101,7 @@ Finally, remember that **design patterns are guidelines, not strict rules**. Rea
 - [[Memento Pattern]] :  
   **Trigger clue:** “Undo/Redo”, “Save and restore state”, “Checkpoint or Snapshot”  
   **Core idea:** Capture and store an object's state so it can be restored later without exposing its internal implementation details.
+
+- [[Prototype Pattern]] :  
+  **Trigger clue:** “Create a copy”, “Clone an existing object”, “Many similar objects needed”  
+  **Core idea:** Create new objects by cloning an existing object instead of creating and initializing them from scratch.
